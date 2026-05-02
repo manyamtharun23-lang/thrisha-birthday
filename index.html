@@ -68,6 +68,7 @@ button{
 }
 
 @keyframes pulse{
+
     0%{
         transform:scale(1);
     }
@@ -79,9 +80,11 @@ button{
     100%{
         transform:scale(1);
     }
+
 }
 
 @keyframes fade{
+
     from{
         opacity:0;
         transform:translateY(20px);
@@ -91,9 +94,11 @@ button{
         opacity:1;
         transform:translateY(0);
     }
+
 }
 
 @keyframes bg{
+
     0%{
         background-position:0% 50%;
     }
@@ -105,6 +110,7 @@ button{
     100%{
         background-position:0% 50%;
     }
+
 }
 
 </style>
@@ -112,6 +118,7 @@ button{
 </head>
 
 <body>
+
 
 <!-- MUSIC -->
 
@@ -127,13 +134,17 @@ button{
 <h1>Hey Thrisha 🌸</h1>
 
 <p>
+
 Mundhu volume konchem penchu 🎧<br><br>
 
 tarvata kinda unna cake cut (Tap) chey 🎂😌
+
 </p>
 
 <div class="cake" onclick="cutCake()">
+
 🎂
+
 </div>
 
 </div>
@@ -146,9 +157,11 @@ tarvata kinda unna cake cut (Tap) chey 🎂😌
 <h1>Ahaaa 😄</h1>
 
 <p>
+
 Finally cake cut chesav 🎉<br><br>
 
 ippudu official ga ee day needhi ✨
+
 </p>
 
 <button onclick="nextStep(2,3)">
@@ -165,11 +178,13 @@ Next 👀
 <h1>Important Notice 😌</h1>
 
 <p>
+
 E roju stress allowed kadhu 🚫<br><br>
 
 Only smiles allowed 😄✨<br><br>
 
 Cake ekkuva thinachu today 🍰😅
+
 </p>
 
 <button onclick="nextStep(3,4)">
@@ -186,9 +201,11 @@ Okay 😌
 <h1>🎂 HAPPY BIRTHDAY THRISHA 🎂</h1>
 
 <p>
+
 Many More Happy Returns Of The Day 🤍<br><br>
 
 ee world ki nuvvu konchem extra special 😌💖
+
 </p>
 
 <button onclick="nextStep(4,5)">
@@ -205,7 +222,9 @@ Click Chey 👀
 <h1>One Last Thing 😅🤍</h1>
 
 <p>
+
 Edho ala try chesaa… nachindhi ani anukuntunna 😅🤍
+
 </p>
 
 <button onclick="finalMessage()">
@@ -230,6 +249,7 @@ function cutCake(){
 
     document.getElementById("step2")
     .classList.remove("hidden");
+
 }
 
 
@@ -240,12 +260,15 @@ function nextStep(current,next){
 
     document.getElementById("step"+next)
     .classList.remove("hidden");
+
 }
 
 
 function finalMessage(){
 
     alert("Made with ❤️ for Thrisha ✨");
+
+    window.close();
 
 }
 
