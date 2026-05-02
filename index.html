@@ -14,9 +14,9 @@ body{
     justify-content:center;
     align-items:center;
     font-family:Arial,sans-serif;
-    background:linear-gradient(135deg,#ff0080,#7928ca,#2afadf);
+    background:linear-gradient(135deg,#667eea,#764ba2,#89f7fe);
     background-size:400% 400%;
-    animation:bg 10s infinite ease;
+    animation:bg 12s ease infinite;
     overflow:hidden;
     color:white;
 }
@@ -26,10 +26,10 @@ body{
     max-width:420px;
     padding:30px;
     border-radius:25px;
-    background:rgba(255,255,255,0.12);
-    backdrop-filter:blur(10px);
+    background:rgba(255,255,255,0.10);
+    backdrop-filter:blur(12px);
     text-align:center;
-    box-shadow:0 0 30px rgba(255,255,255,0.2);
+    box-shadow:0 0 25px rgba(255,255,255,0.15);
     animation:fade 1s ease;
 }
 
@@ -43,7 +43,7 @@ h1{
 
 p{
     font-size:1.1rem;
-    line-height:1.7;
+    line-height:1.8;
 }
 
 button{
@@ -52,7 +52,7 @@ button{
     border:none;
     border-radius:30px;
     background:white;
-    color:#7928ca;
+    color:#5b4b8a;
     font-weight:bold;
     cursor:pointer;
     font-size:1rem;
@@ -61,31 +61,40 @@ button{
 .cake{
     font-size:5rem;
     cursor:pointer;
-    animation:pulse 1.5s infinite;
+    margin-top:20px;
+    animation:pulse 2s infinite;
 }
 
 @keyframes pulse{
     0%{transform:scale(1);}
-    50%{transform:scale(1.1);}
+    50%{transform:scale(1.08);}
     100%{transform:scale(1);}
 }
 
 @keyframes fade{
     from{
         opacity:0;
-        transform:scale(0.9);
+        transform:translateY(20px);
     }
 
     to{
         opacity:1;
-        transform:scale(1);
+        transform:translateY(0);
     }
 }
 
 @keyframes bg{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
 }
 
 </style>
@@ -107,13 +116,13 @@ button{
 
 <div class="card" id="step1">
 
-<h1>Oi Thrisha 😌</h1>
+<h1>Hey Thrisha 🌸</h1>
 
 <p>
 
-Mundhu cake cut chey madam 🎂<br><br>
+Mundhu cake cut chey 🎂<br><br>
 
-Late chesthe birthday cancel aipothadi 👀
+Ledu ante next page open avvadu 👀
 
 </p>
 
@@ -129,22 +138,18 @@ Late chesthe birthday cancel aipothadi 👀
 
 <div class="card hidden" id="step2">
 
-<h1>Ahaaa 😄</h1>
+<h1>Hehe 😄</h1>
 
 <p>
 
 Cake cut aipoyindi 🎉<br><br>
 
-Ippudu task no.2 👇<br><br>
-
-Konchem navvu 😄<br>
-
-Birthday baby serious ga undakudadhu ✨
+Ippudu official ga birthday start ✨
 
 </p>
 
 <button onclick="nextStep(2,3)">
-Navvesa 😌
+Next 😌
 </button>
 
 </div>
@@ -155,20 +160,20 @@ Navvesa 😌
 
 <div class="card hidden" id="step3">
 
-<h1>Last Task 🌸</h1>
+<h1>Small Birthday Rules 🌸</h1>
 
 <p>
 
-I roju full happy ga undali 😤🤍<br><br>
+☑ I roju stress vaddu 😤<br><br>
 
-Overthinking allowed kadhu 🚫<br><br>
+☑ Full happy ga undali 😌<br><br>
 
-Only smiles allowed 😌✨
+☑ Cake ekkuva thinachu today 🍰✨
 
 </p>
 
 <button onclick="nextStep(3,4)">
-Promise 💖
+Okay 😌
 </button>
 
 </div>
@@ -185,9 +190,7 @@ Promise 💖
 
 Many More Happy Returns Of The Day 🤍<br><br>
 
-Nuvvu happy ga unte chalu ✨<br><br>
-
-And yes...<br>
+And yes...<br><br>
 
 ee world ki nuvvu konchem extra special 😌💖
 
@@ -229,12 +232,12 @@ document.getElementById("step"+next)
 
 function finalMessage(){
 
-alert("Made with ❤️ only for Birthday Baby Thrisha 😌✨");
+alert("Made with ❤️ for Thrisha ✨");
 
 }
 
 </script>
 
 </body>
+
 </html>
-```
