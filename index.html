@@ -2,171 +2,99 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Secret Message</title>
+  <title>Thrisha Birthday Surprise</title>
   <style>
     body {
       margin: 0;
-      height: 100vh;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg,#ff4d6d,#7b2cbf,#4cc9f0);
+      background-size: 400% 400%;
+      animation: bg 10s ease infinite;
+      color: white;
       display: flex;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      font-family: Arial, sans-serif;
+      height: 100vh;
       overflow: hidden;
-      color: white;
-    }.box {
+    }.card {
+  width: 85%;
+  max-width: 420px;
+  padding: 30px;
+  border-radius: 25px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(12px);
   text-align: center;
-  padding: 40px;
-  border-radius: 20px;
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 30px rgba(255,255,255,0.1);
-  animation: fadeIn 2s ease;
+  box-shadow: 0 0 30px rgba(255,255,255,0.2);
+  animation: fade 1s ease;
 }
 
 h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+  font-size: 2.2rem;
 }
 
 p {
-  font-size: 1.2rem;
-  opacity: 0.9;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
-.heart {
-  font-size: 3rem;
-  animation: pulse 1.5s infinite;
+button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  background: white;
+  color: #7b2cbf;
+  font-weight: bold;
 }
 
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-  100% { transform: scale(1); }
+.hidden {
+  display: none;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+@keyframes fade {
+  from { opacity:0; transform:scale(0.9); }
+  to { opacity:1; transform:scale(1); }
+}
+
+@keyframes bg {
+  0% { background-position:0% 50%; }
+  50% { background-position:100% 50%; }
+  100% { background-position:0% 50%; }
 }
 
   </style>
 </head>
-<body>
-  <div class="stars"></div>  <div class="box">
-    <div class="heart">🎉💖🎂</div>
+<body>  <div class="card" id="step1">
     <h1>Hey Thrisha ✨</h1>
-    <p class="typing">Initializing Birthday Surprise...</p><div class="tasks">
-  <h2>Today's Mission 🌸</h2>
-  <ul>
-    <li>☑ Smile more today</li>
-    <li>☑ Eat your favorite food</li>
-    <li>☑ Stay happy always</li>
-    <li>☑ Remember you are special ✨</li>
-  </ul>
-</div>
-
-<div class="message">
-  <p>
-    Many More Happy Returns Of The Day 🤍<br><br>
-    “The world became a little better the day you were born.”
-  </p>
-</div>
-
-  </div>  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(135deg, #ff0080, #7928ca, #2afadf);
-      background-size: 400% 400%;
-      animation: gradientMove 10s ease infinite;
-      font-family: Arial, sans-serif;
-      overflow: hidden;
-      color: white;
+    <p>I have something for you 🎁</p>
+    <button onclick="nextStep(1,2)">Open</button>
+  </div>  <div class="card hidden" id="step2">
+    <h1>Mission For Today 🌸</h1>
+    <p>
+      ☑ Smile a lot 😄<br>
+      ☑ Eat your favorite food 🍕<br>
+      ☑ Stay happy always ✨
+    </p>
+    <button onclick="nextStep(2,3)">Next</button>
+  </div>  <div class="card hidden" id="step3">
+    <h1>One More Thing 💖</h1>
+    <p>
+      The world became better the day you were born 🌍✨
+    </p>
+    <button onclick="nextStep(3,4)">Final Surprise</button>
+  </div>  <div class="card hidden" id="step4">
+    <h1>🎂 Happy Birthday Thrisha 🎂</h1>
+    <p>
+      Many More Happy Returns Of The Day 🤍<br><br>
+      Stay the amazing person you are ✨
+    </p>
+    <button onclick="alert('Made with ❤️ just for you')">❤️</button>
+  </div>  <script>
+    function nextStep(current, next) {
+      document.getElementById('step' + current).classList.add('hidden');
+      document.getElementById('step' + next).classList.remove('hidden');
     }
-
-    .box {
-      text-align: center;
-      padding: 35px;
-      border-radius: 25px;
-      background: rgba(255,255,255,0.12);
-      backdrop-filter: blur(12px);
-      box-shadow: 0 0 40px rgba(255,255,255,0.25);
-      width: 85%;
-      max-width: 420px;
-      animation: fadeIn 2s ease;
-    }
-
-    h1 {
-      font-size: 2.7rem;
-      margin-bottom: 10px;
-    }
-
-    .typing {
-      overflow: hidden;
-      white-space: nowrap;
-      border-right: 2px solid white;
-      width: 0;
-      margin: auto;
-      animation: typing 3s steps(30,end) forwards;
-    }
-
-    .heart {
-      font-size: 3rem;
-      animation: pulse 1.5s infinite;
-    }
-
-    .tasks {
-      margin-top: 20px;
-      text-align: left;
-      background: rgba(255,255,255,0.08);
-      padding: 15px;
-      border-radius: 15px;
-    }
-
-    .tasks h2 {
-      text-align: center;
-      font-size: 1.2rem;
-    }
-
-    .tasks ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .tasks li {
-      margin: 10px 0;
-      font-size: 1rem;
-    }
-
-    .message {
-      margin-top: 20px;
-      font-size: 1.1rem;
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-      100% { transform: scale(1); }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    @keyframes typing {
-      from { width: 0; }
-      to { width: 100%; }
-    }
-  </style></body>
+  </script></body>
 </html>
