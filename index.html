@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Thrisha Birthday Surprise</title>
 
-<style></style>
+<style>
 
 body{
     margin:0;
@@ -66,9 +68,17 @@ button{
 }
 
 @keyframes pulse{
-    0%{transform:scale(1);}
-    50%{transform:scale(1.08);}
-    100%{transform:scale(1);}
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.08);
+    }
+
+    100%{
+        transform:scale(1);
+    }
 }
 
 @keyframes fade{
@@ -84,9 +94,17 @@ button{
 }
 
 @keyframes bg{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
 }
 
 </style>
@@ -95,13 +113,11 @@ button{
 
 <body>
 
-
 <!-- MUSIC -->
 
 <audio id="music" loop>
-  <source src="Inthandham.mp3" type="audio/mp3">
+    <source src="Inthandham.mp3" type="audio/mp3">
 </audio>
-
 
 
 <!-- STEP 1 -->
@@ -111,11 +127,9 @@ button{
 <h1>Hey Thrisha 🌸</h1>
 
 <p>
-
 Mundhu volume konchem penchu 🎧<br><br>
 
-tarvata kinda unna cake cut(Tap) chey 🎂😌
-
+tarvata kinda unna cake cut (Tap) chey 🎂😌
 </p>
 
 <div class="cake" onclick="cutCake()">
@@ -125,7 +139,6 @@ tarvata kinda unna cake cut(Tap) chey 🎂😌
 </div>
 
 
-
 <!-- STEP 2 -->
 
 <div class="card hidden" id="step2">
@@ -133,11 +146,9 @@ tarvata kinda unna cake cut(Tap) chey 🎂😌
 <h1>Ahaaa 😄</h1>
 
 <p>
-
 Finally cake cut chesav 🎉<br><br>
 
 ippudu official ga ee day needhi ✨
-
 </p>
 
 <button onclick="nextStep(2,3)">
@@ -147,7 +158,6 @@ Next 👀
 </div>
 
 
-
 <!-- STEP 3 -->
 
 <div class="card hidden" id="step3">
@@ -155,13 +165,11 @@ Next 👀
 <h1>Important Notice 😌</h1>
 
 <p>
-
 E roju stress allowed kadhu 🚫<br><br>
 
 Only smiles allowed 😄✨<br><br>
 
- ... cake ekkuva thinachu today 🍰😅
-
+Cake ekkuva thinachu today 🍰😅
 </p>
 
 <button onclick="nextStep(3,4)">
@@ -171,7 +179,6 @@ Okay 😌
 </div>
 
 
-
 <!-- STEP 4 -->
 
 <div class="card hidden" id="step4">
@@ -179,55 +186,66 @@ Okay 😌
 <h1>🎂 HAPPY BIRTHDAY THRISHA 🎂</h1>
 
 <p>
-
 Many More Happy Returns Of The Day 🤍<br><br>
 
 ee world ki nuvvu konchem extra special 😌💖
-
 </p>
 
-<button onclick="finalMessage()">
+<button onclick="nextStep(4,5)">
 Click Chey 👀
 </button>
 
 </div>
 
 
+<!-- STEP 5 -->
+
+<div class="card hidden" id="step5">
+
+<h1>One Last Thing 😅🤍</h1>
+
+<p>
+Edho ala try chesaa… nachindhi ani anukuntunna 😅🤍
+</p>
+
+<button onclick="finalMessage()">
+Final Click 🌸
+</button>
+
+</div>
+
 
 <script>
 
 function cutCake(){
 
-let music = document.getElementById("music");
+    let music = document.getElementById("music");
 
-music.currentTime = 8;
+    music.currentTime = 8;
 
-music.play();
+    music.play();
 
-document.getElementById("step1")
-.classList.add("hidden");
+    document.getElementById("step1")
+    .classList.add("hidden");
 
-document.getElementById("step2")
-.classList.remove("hidden");
-
+    document.getElementById("step2")
+    .classList.remove("hidden");
 }
-
 
 
 function nextStep(current,next){
 
-document.getElementById("step"+current)
-.classList.add("hidden");
+    document.getElementById("step"+current)
+    .classList.add("hidden");
 
-document.getElementById("step"+next)
-.classList.remove("hidden");
-
+    document.getElementById("step"+next)
+    .classList.remove("hidden");
 }
 
 
 function finalMessage(){
 
-alert("Made with ❤️ for Thrisha ✨");
+    alert("Made with ❤️ for Thrisha ✨");
 
 }
 
@@ -236,4 +254,3 @@ alert("Made with ❤️ for Thrisha ✨");
 </body>
 
 </html>
-```
