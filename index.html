@@ -198,7 +198,11 @@ Click Chey 👀
 
 function cutCake(){
 
-document.getElementById("music").play();
+let music = document.getElementById("music");
+
+music.currentTime = 8;
+
+music.play();
 
 document.getElementById("step1")
 .classList.add("hidden");
@@ -207,6 +211,7 @@ document.getElementById("step2")
 .classList.remove("hidden");
 
 }
+
 
 
 function nextStep(current,next){
